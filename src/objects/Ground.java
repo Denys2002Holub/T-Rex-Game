@@ -9,4 +9,6 @@ public class Ground {
         BufferedImage groundImage;
         int x;
     }
+    
+    private static int GROUND_Y;
 }
