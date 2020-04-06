@@ -1,9 +1,8 @@
 package objects;
 
-import Resource.Resource;
+import resources.Resource;
 
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.util.ArrayList;
 
 public class Ground {
