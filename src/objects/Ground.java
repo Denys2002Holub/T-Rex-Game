@@ -1,5 +1,7 @@
 package objects;
 
+import Resource.Resource;
+
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.util.ArrayList;
@@ -18,6 +20,22 @@ public class Ground {
     private ArrayList<GroundImage> groundImagesList;
 
     public Ground (int panelHeight) {
-        
+        GROUND_Y = (int)(panelHeight - (0.20*panelHeight));
+
+        try {
+            image = new Resource().getResourceImage("../images/Ground.png");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        groundImagesList = new ArrayList<GroundImage>();
+
+        for (int i = 0; i < 3; i++) {
+            GroundImage groundImageObject = new GroundImage();
+            groundImageObject.groundImage = image;
+            groundImageObject.x = 0;
+
+            groundImagesList.add(groundImageObject);
+        }
     }
 }
