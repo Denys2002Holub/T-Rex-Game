@@ -2,6 +2,7 @@ package objects;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
+import java.util.ArrayList;
 
 public class Ground {
 
@@ -11,4 +12,12 @@ public class Ground {
     }
     
     private static int GROUND_Y;
+
+    private BufferedImage image;
+
+    private ArrayList<GroundImage> groundImagesList;
+
+    public Ground (int panelHeight) {
+        
+    }
 }
