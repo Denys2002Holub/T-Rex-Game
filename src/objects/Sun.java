@@ -2,28 +2,24 @@ package objects;
 
 import resources.Resource;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Sun {
 
-    private class SunImage{
-        BufferedImage image;
-        int x, y;
-    }
+    private static int sunX, sunY;
 
     private BufferedImage image;
 
     public Sun(int panelHeight, int panelWidth) {
 
-        try {
-            image = new Resource().getResourceImage("../images/Sun.png");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        image = new Resource().getResourceImage("../images/Sun.png");
 
-        SunImage sunImageObject = new SunImage();
-        sunImageObject.image = image;
-        sunImageObject.y = (int)(panelHeight-(0.6*panelHeight));
-        sunImageObject.x = (int)(panelWidth - (0.15*panelWidth));
+        sunY = (int) (panelHeight - (0.6 * panelHeight));
+        sunX = (int) (panelWidth - (0.15 * panelWidth));
+    }
+
+    public void create(Graphics g) {
+        g.drawImage(image, sunX, sunY, null);
     }
 }
