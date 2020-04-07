@@ -2,6 +2,7 @@ package objects;
 
 import resources.Resource;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Dino {
@@ -47,5 +48,9 @@ public class Dino {
 
         state = 1;
         foot = NO_FOOT;
+    }
+
+    public void create(Graphics g) {
+        
     }
 }
