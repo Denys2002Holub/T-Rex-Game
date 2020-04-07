@@ -45,6 +45,16 @@ public class Barrier {
         imagesList.add(new Resource().getResourceImage("../images/Cactus-2.png"));
         imagesList.add(new Resource().getResourceImage("../images/Cactus-1.png"));
 
-        
+        int x = firstX;
+
+        for (BufferedImage bi : imagesList) {
+            BarrierImage barrierImg = new BarrierImage();
+            barrierImg.barrierImage = bi;
+            barrierImg.x = firstX;
+            barrierImg.y = Ground.GROUND_Y - bi.getHeight() + 5;
+            x += getBarrierInterval();
+
+            barrierImagesList.add(barrierImg);
+        }
     }
 }
