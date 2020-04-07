@@ -42,5 +42,10 @@ public class Dino {
         dinoEndX = dinoStartX + standDino.getWidth();
         dinoBaseY = Ground.GROUND_Y + 5;
         dinoTopY = dinoBaseY - standDino.getHeight() + 5;
+
+        topPoint = dinoTopY - 140;
+
+        state = 1;
+        foot = NO_FOOT;
     }
 }
