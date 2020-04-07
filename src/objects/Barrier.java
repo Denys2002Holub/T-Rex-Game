@@ -79,6 +79,8 @@ public class Barrier {
     }
 
     public void create(Graphics g) {
-        
+        for (BarrierImage bi : barrierImagesList) {
+            g.drawImage(bi.barrierImage, bi.x, bi.y, null);
+        }
     }
 }
