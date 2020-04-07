@@ -26,7 +26,7 @@ public class Barrier {
     ArrayList<BarrierImage> barrierImagesList;
     ArrayList<BufferedImage> imagesList;
 
-    private int getBarrietInterval() {
+    private int getBarrierInterval() {
         return (int) (Math.random() * ((400 - 250) + 1) + 250);
     }
 }
