@@ -29,4 +29,8 @@ public class Barrier {
     private int getBarrierInterval() {
         return (int) (Math.random() * ((400 - 250) + 1) + 250);
     }
+
+    public Barrier(int panelWidth) {
+        
+    }
 }
