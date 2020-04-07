@@ -1,5 +1,7 @@
 package objects;
 
+import resources.Resource;
+
 import java.awt.image.BufferedImage;
 
 public class Dino {
@@ -31,6 +33,9 @@ public class Dino {
     BufferedImage deadDino;
 
     public Dino() {
-        
+        standDino = new Resource().getResourceImage("../images/Dino-stand.png");
+        leftFootDino = new Resource().getResourceImage("../images/Dino-left-up.png");
+        rightFootDino = new Resource().getResourceImage("../images/Dino-right-up.png");
+        deadDino = new Resource().getResourceImage("../images/Dino-big-eyes.png");
     }
 }
