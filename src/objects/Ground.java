@@ -2,6 +2,7 @@ package objects;
 
 import resources.Resource;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -57,5 +58,9 @@ public class Ground {
             first.x = previousX + image.getWidth();
             groundImagesList.add(first);
         }
+    }
+
+    public void create(Graphics g) {
+        
     }
 }
