@@ -58,6 +58,7 @@ public class Dino {
                 g.drawImage(standDino, dinoStartX, dinoTopY, null);
                 g.drawString("P R E S S  'S P A C E'  T O  S T A R T", 120, 250);
                 break;
+
             case RUNNING:
                 if (foot == LEFT_FOOT) {
                     g.drawImage(rightFootDino, dinoStartX, dinoTopY, null);
@@ -69,6 +70,11 @@ public class Dino {
                     g.drawImage(leftFootDino, dinoStartX, dinoTopY, null);
                     foot = LEFT_FOOT;
                 }
+                break;
+
+            case DIE:
+                g.drawImage(deadDino, dinoStartX, dinoTop, null);
+                g.drawString("G A M E  O V E R", 280, 150);
                 break;
         }
     }
