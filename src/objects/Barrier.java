@@ -73,8 +73,12 @@ public class Barrier {
 
         if (firstBI.x < -firstBI.barrierImage.getWidth()) {
             barrierImagesList.remove(firstBI);
-            firstBI.x = barrierImagesList.get(barrierImagesList.size()-1).x + getBarrierInterval();
+            firstBI.x = barrierImagesList.get(barrierImagesList.size() - 1).x + getBarrierInterval();
             barrierImagesList.add(firstBI);
         }
+    }
+
+    public void create(Graphics g) {
+        
     }
 }
