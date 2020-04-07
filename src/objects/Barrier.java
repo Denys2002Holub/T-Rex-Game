@@ -20,4 +20,9 @@ public class Barrier {
             return rectangle;
         }
     }
+
+    private int speed, firstX;
+
+    ArrayList<BarrierImage> barrierImagesList;
+    ArrayList<BufferedImage> imagesList;
 }
