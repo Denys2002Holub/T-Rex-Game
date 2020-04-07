@@ -1,5 +1,6 @@
 package objects;
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
@@ -8,5 +9,15 @@ public class Barrier {
     public class BarrierImage {
         BufferedImage barrierImage;
         int x,y;
+
+        public Rectangle getRectangle() {
+            Rectangle rectangle = new Rectangle();
+            rectangle.x = x;
+            rectangle.y = y;
+            rectangle.width = barrierImage.getWidth();
+            rectangle.height = barrierImage.getHeight();
+
+            return rectangle;
+        }
     }
 }
