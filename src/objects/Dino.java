@@ -9,7 +9,7 @@ public class Dino {
     public static int dinoTop, dinoBottom, topPoint;
 
     public static boolean topPointReached;
-    
+
     public static int state;
 
     public final int
@@ -29,4 +29,8 @@ public class Dino {
     BufferedImage leftFootDino;
     BufferedImage rightFootDino;
     BufferedImage deadDino;
+
+    public Dino() {
+        
+    }
 }
