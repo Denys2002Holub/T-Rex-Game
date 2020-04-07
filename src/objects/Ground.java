@@ -4,6 +4,7 @@ import resources.Resource;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Ground {
 
@@ -11,15 +12,15 @@ public class Ground {
         BufferedImage groundImage;
         int x;
     }
-    
+
     private static int GROUND_Y;
 
     private BufferedImage image;
 
     private ArrayList<GroundImage> groundImagesList;
 
-    public Ground (int panelHeight) {
-        GROUND_Y = (int)(panelHeight - (0.20*panelHeight));
+    public Ground(int panelHeight) {
+        GROUND_Y = (int) (panelHeight - (0.20 * panelHeight));
 
         try {
             image = new Resource().getResourceImage("../images/Ground.png");
@@ -39,6 +40,22 @@ public class Ground {
     }
 
     public void update() {
-        
+        Iterator<GroundImage> iterator = groundImagesList.iterator();
+        GroundImage first = new GroundImage();
+
+        first.x = -10;
+        int previousX = first.x;
+
+        while (iterator.hasNext()) {
+            GroundImage next = iterator.next();
+            next.x = previousX + image.getWidth();
+            previousX = next.x;
+        }
+
+        if (first.x < -image.getWidth()) {
+            groundImagesList.remove(first);
+            first.x = previousX + image.getWidth();
+            groundImagesList.add(first);
+        }
     }
 }
