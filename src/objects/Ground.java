@@ -61,6 +61,8 @@ public class Ground {
     }
 
     public void create(Graphics g) {
-        
+        for (GroundImage object : groundImagesList) {
+            g.drawImage(object.groundImage, object.x, GROUND_Y, null);
+        }
     }
 }
