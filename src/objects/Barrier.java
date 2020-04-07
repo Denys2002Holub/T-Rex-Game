@@ -1,5 +1,7 @@
 package objects;
 
+import resources.Resource;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -31,6 +33,18 @@ public class Barrier {
     }
 
     public Barrier(int panelWidth) {
+        firstX = (int) (panelWidth * 1.5);
+        speed = 10;
+
+        barrierImagesList = new ArrayList<BarrierImage>();
+        imagesList = new ArrayList<BufferedImage>();
+
+        imagesList.add(new Resource().getResourceImage("../images/Cactus-1.png"));
+        imagesList.add(new Resource().getResourceImage("../images/Cactus-2.png"));
+        imagesList.add(new Resource().getResourceImage("../images/Cactus-5.png"));
+        imagesList.add(new Resource().getResourceImage("../images/Cactus-2.png"));
+        imagesList.add(new Resource().getResourceImage("../images/Cactus-1.png"));
+
         
     }
 }
