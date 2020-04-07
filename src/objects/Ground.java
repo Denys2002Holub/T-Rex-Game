@@ -14,11 +14,11 @@ public class Ground {
         int x;
     }
 
-    private static int GROUND_Y;
+    public static int GROUND_Y;
 
-    private BufferedImage image;
+    public BufferedImage image;
 
-    private ArrayList<GroundImage> groundImagesList;
+    public ArrayList<GroundImage> groundImagesList;
 
     public Ground(int panelHeight) {
         GROUND_Y = (int) (panelHeight - (0.20 * panelHeight));
