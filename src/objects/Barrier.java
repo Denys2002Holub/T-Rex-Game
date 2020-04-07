@@ -57,4 +57,8 @@ public class Barrier {
             barrierImagesList.add(barrierImg);
         }
     }
+
+    public void update() {
+        
+    }
 }
