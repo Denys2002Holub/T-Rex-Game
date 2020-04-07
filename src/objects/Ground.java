@@ -37,4 +37,8 @@ public class Ground {
             groundImagesList.add(groundImageObject);
         }
     }
+
+    public void update() {
+        
+    }
 }
