@@ -8,7 +8,7 @@ public class Barrier {
 
     public class BarrierImage {
         BufferedImage barrierImage;
-        int x,y;
+        int x, y;
 
         public Rectangle getRectangle() {
             Rectangle rectangle = new Rectangle();
@@ -25,4 +25,8 @@ public class Barrier {
 
     ArrayList<BarrierImage> barrierImagesList;
     ArrayList<BufferedImage> imagesList;
+
+    private int getBarrietInterval() {
+        return (int) (Math.random() * ((400 - 250) + 1) + 250);
+    }
 }
