@@ -15,16 +15,16 @@ public class Dino {
     public static int state;
 
     public final int
-            STAND = 0,
-            RUNNING = 1,
-            JUMPING = 2,
-            DIE = 3;
+            STAND = 1,
+            RUNNING = 2,
+            JUMPING = 3,
+            DIE = 4;
 
     public static int foot;
 
     public final int
-            LEFT_FOOT = 0,
-            RIGHT_FOOT = 1,
+            LEFT_FOOT = 1,
+            RIGHT_FOOT = 2,
             NO_FOOT = 3;
 
     static BufferedImage standDino;
@@ -37,5 +37,10 @@ public class Dino {
         leftFootDino = new Resource().getResourceImage("../images/Dino-left-up.png");
         rightFootDino = new Resource().getResourceImage("../images/Dino-right-up.png");
         deadDino = new Resource().getResourceImage("../images/Dino-big-eyes.png");
+
+        dinoStartX = 100;
+        dinoEndX = dinoStartX + standDino.getWidth();
+        dinoBaseY = Ground.GROUND_Y + 5;
+        dinoTopY = dinoBaseY - standDino.getHeight() + 5;
     }
 }
