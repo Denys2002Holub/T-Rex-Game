@@ -5,6 +5,7 @@ import resources.Resource;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Barrier {
 
@@ -59,6 +60,21 @@ public class Barrier {
     }
 
     public void update() {
-        
+        Iterator<BarrierImage> barrierImageIterator = barrierImagesList.iterator();
+        BarrierImage firstBI = new BarrierImage();
+
+        firstBI.x -= speed;
+        while (barrierImageIterator.hasNext()) {
+            BarrierImage bi = barrierImageIterator.next();
+            bi.x -= speed;
+        }
+
+        BarrierImage lastBI = barrierImagesList.get(barrierImagesList.size() - 1);
+
+        if (firstBI.x < -firstBI.barrierImage.getWidth()) {
+            barrierImagesList.remove(firstBI);
+            firstBI.x = barrierImagesList.get(barrierImagesList.size()-1).x + getBarrierInterval();
+            barrierImagesList.add(firstBI);
+        }
     }
 }
