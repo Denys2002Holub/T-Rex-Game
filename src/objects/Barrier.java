@@ -88,7 +88,7 @@ public class Barrier {
 
     public boolean isIntersect() {
         for (BarrierImage bi : barrierImagesList) {
-            if(Dino.getDinoRectangle().intersects(bi.getRectangle())) {
+            if (Dino.getDinoRectangle().intersects(bi.getRectangle())) {
                 blockedAt = bi;
                 return true;
             }
@@ -97,6 +97,18 @@ public class Barrier {
     }
 
     public void resume() {
-        
+        int x = firstX / 2;
+        barrierImagesList = new ArrayList<BarrierImage>();
+
+        for (BufferedImage buImage : imagesList) {
+            BarrierImage barImage = new BarrierImage();
+
+            barImage.barrierImage = buImage;
+            barImage.x = x;
+            barImage.y = Ground.GROUND_Y - buImage.getHeight() + 5;
+            x += getBarrierInterval();
+
+            barrierImagesList.add(barImage);
+        }
     }
 }
