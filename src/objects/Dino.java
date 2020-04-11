@@ -78,4 +78,8 @@ public class Dino {
                 break;
         }
     }
+
+    public Rectangle getDinoRectangle() {
+        
+    }
 }
