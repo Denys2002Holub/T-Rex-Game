@@ -29,6 +29,8 @@ public class Barrier {
     ArrayList<BarrierImage> barrierImagesList;
     ArrayList<BufferedImage> imagesList;
 
+    private BarrierImage blockedAt;
+
     private int getBarrierInterval() {
         return (int) (Math.random() * ((400 - 250) + 1) + 250);
     }
@@ -85,6 +87,12 @@ public class Barrier {
     }
 
     public boolean isIntersect() {
-
+        for (BarrierImage bi : barrierImagesList) {
+            if(Dino.getDinoRectangle().intersects(bi.getRectangle())) {
+                blockedAt = bi;
+                return true;
+            }
+        }
+        return false;
     }
 }
