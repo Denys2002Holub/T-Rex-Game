@@ -80,6 +80,11 @@ public class Dino {
     }
 
     public Rectangle getDinoRectangle() {
-        
+        Rectangle rectangle = new Rectangle();
+        rectangle.height = standDino.getHeight();
+        rectangle.width = standDino.getWidth();
+        rectangle.x = dinoStartX;
+        rectangle.y = dinoBaseY;
+        return rectangle;
     }
 }
