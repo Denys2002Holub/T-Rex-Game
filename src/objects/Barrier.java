@@ -95,4 +95,8 @@ public class Barrier {
         }
         return false;
     }
+
+    public void resume() {
+        
+    }
 }
