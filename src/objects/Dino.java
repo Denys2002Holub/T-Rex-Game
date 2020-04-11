@@ -116,4 +116,8 @@ public class Dino {
 
         return rectangle;
     }
+
+    public void die() {
+        state = DIE;
+    }
 }
