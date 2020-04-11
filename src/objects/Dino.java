@@ -15,7 +15,7 @@ public class Dino {
 
     public static int state;
 
-    public final int
+    public static final int
             STAND = 1,
             RUNNING = 2,
             JUMPING = 3,
@@ -99,7 +99,7 @@ public class Dino {
         }
     }
 
-    public Rectangle getDinoRectangle() {
+    public static Rectangle getDinoRectangle() {
         Rectangle rectangle = new Rectangle();
         rectangle.x = dinoStartX;
 
