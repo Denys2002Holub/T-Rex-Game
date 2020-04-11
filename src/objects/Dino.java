@@ -83,10 +83,19 @@ public class Dino {
 
     public Rectangle getDinoRectangle() {
         Rectangle rectangle = new Rectangle();
+        rectangle.x = dinoStartX;
+
+        if (state == JUMPING && !topPointReached) {
+            rectangle.y = dinoTop - JUMP_FACTOR;
+        } else if (state == JUMPING && topPointReached) {
+            rectangle.y = dinoTop + JUMP_FACTOR;
+        } else {
+            rectangle.y = dinoTop;
+        }
+
         rectangle.height = standDino.getHeight();
         rectangle.width = standDino.getWidth();
-        rectangle.x = dinoStartX;
-        rectangle.y = dinoBaseY;
+        
         return rectangle;
     }
 }
