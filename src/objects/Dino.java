@@ -125,4 +125,10 @@ public class Dino {
         dinoTop = dinoTopY;
         state = RUNNING;
     }
+
+    public void jumping() {
+        dinoTop = dinoTopY;
+        topPointReached = false;
+        state = JUMPING;
+    }
 }
