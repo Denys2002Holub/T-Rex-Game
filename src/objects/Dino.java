@@ -60,6 +60,24 @@ public class Dino {
                 break;
 
             case JUMPING:
+                if (dinoTop > topPoint && !topPointReached) {
+                    g.drawImage(standDino, dinoStartX, dinoTop -= JUMP_FACTOR, null);
+                    break;
+                }
+                if (dinoTop >= topPoint && !topPointReached) {
+                    topPointReached = true;
+                    g.drawImage(standDino, dinoStartX, dinoTop += JUMP_FACTOR, null);
+                    break;
+                }
+                if (dinoTop > topPoint && topPointReached) {
+                    if (dinoTopY == dinoTop && topPointReached) {
+                        state = RUNNING;
+                        topPointReached = false;
+                        break;
+                    }
+                    g.drawImage(standDino, dinoStartX, dinoTop += JUMP_FACTOR, null);
+                    break;
+                }
 
             case RUNNING:
                 if (foot == LEFT_FOOT) {
@@ -95,7 +113,7 @@ public class Dino {
 
         rectangle.height = standDino.getHeight();
         rectangle.width = standDino.getWidth();
-        
+
         return rectangle;
     }
 }
