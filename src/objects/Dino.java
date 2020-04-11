@@ -59,6 +59,8 @@ public class Dino {
                 g.drawString("P R E S S  'S P A C E'  T O  S T A R T", 120, 250);
                 break;
 
+            case JUMPING:
+
             case RUNNING:
                 if (foot == LEFT_FOOT) {
                     g.drawImage(rightFootDino, dinoStartX, dinoTopY, null);
