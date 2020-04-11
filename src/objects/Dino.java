@@ -120,4 +120,9 @@ public class Dino {
     public void die() {
         state = DIE;
     }
+
+    public void startRunning() {
+        dinoTop = dinoTopY;
+        state = RUNNING;
+    }
 }
