@@ -83,4 +83,8 @@ public class Barrier {
             g.drawImage(bi.barrierImage, bi.x, bi.y, null);
         }
     }
+
+    public boolean isIntersect() {
+
+    }
 }
