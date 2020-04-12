@@ -36,7 +36,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
         score = 0;
 
-        setSize(WIDTH,HEIGHT);
+        setSize(WIDTH, HEIGHT);
         setVisible(true);
         setBackground(Color.lightGray);
     }
@@ -44,7 +44,14 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     public void paint(Graphics g) {
         super.paint(g);
-        
+
+        g.setFont(new Font("Courier New", Font.BOLD, 25));
+        g.drawString(Integer.toString(score), getWidth() / 2 - 5, 100);
+
+        ground.create(g);
+        dino.create(g);
+        barrier.create(g);
+        sun.create(g);
     }
 
     @Override
