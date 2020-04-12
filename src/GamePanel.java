@@ -70,7 +70,17 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     }
 
     public void updateGame() {
+        score ++;
 
+        ground.update();
+        barrier.update();
+
+        if (barrier.isIntersect()) {
+            dino.die();
+            repaint();
+            running = false;
+            gameOver = true;
+        }
     }
 
     @Override
