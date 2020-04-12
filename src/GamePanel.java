@@ -56,11 +56,21 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     @Override
     public void run() {
+        running = true;
 
+        while (running) {
+            updateGame();
+            repaint();
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void updateGame() {
-        
+
     }
 
     @Override
