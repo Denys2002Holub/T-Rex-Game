@@ -23,6 +23,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     Barrier barrier;
     Sun sun;
 
+    private Thread animator;
+
     private int score;
 
     public GamePanel() {
@@ -70,7 +72,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     }
 
     public void updateGame() {
-        score ++;
+        score++;
 
         ground.update();
         barrier.update();
@@ -85,7 +87,20 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-
+        if (e.getKeyCode() == KeyEvent.VK_UP) {
+            if (gameOver) {
+                score = 0;
+                barrier.resume();
+                gameOver = false;
+            }
+            if (animator == null || !running) {
+                animator = new Thread(this);
+                animator.start();
+                dino.startRunning();
+            } else {
+                dino.jumping();
+            }
+        }
     }
 
     @Override
