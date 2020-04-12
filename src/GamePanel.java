@@ -41,6 +41,12 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         setBackground(Color.lightGray);
     }
 
+
+    public void paint(Graphics g) {
+        super.paint(g);
+        
+    }
+
     @Override
     public void keyTyped(KeyEvent e) {
 
