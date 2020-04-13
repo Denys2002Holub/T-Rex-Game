@@ -42,7 +42,7 @@ public class Ground {
 
     public void update() {
         Iterator<GroundImage> iterator = groundImagesList.iterator();
-        GroundImage first = new GroundImage();
+        GroundImage first = iterator.next();
 
         first.x = -10;
         int previousX = first.x;
