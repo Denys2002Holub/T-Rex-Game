@@ -28,8 +28,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     private int score;
 
     public GamePanel() {
-        //WIDTH =
-        //HEIGHT =
+        WIDTH = UserPanel.WIDTH;
+        HEIGHT = UserPanel.HEIGHT;
 
         ground = new Ground(HEIGHT);
         dino = new Dino();
