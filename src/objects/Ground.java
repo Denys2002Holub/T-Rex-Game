@@ -44,7 +44,7 @@ public class Ground {
         Iterator<GroundImage> iterator = groundImagesList.iterator();
         GroundImage first = iterator.next();
 
-        first.x = -10;
+        first.x -= 10;
         int previousX = first.x;
 
         while (iterator.hasNext()) {
