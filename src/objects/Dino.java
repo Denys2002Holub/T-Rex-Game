@@ -42,7 +42,7 @@ public class Dino {
         dinoStartX = 100;
         dinoEndX = dinoStartX + standDino.getWidth();
         dinoBaseY = Ground.GROUND_Y + 5;
-        dinoTopY = dinoBaseY - standDino.getHeight() + 5;
+        dinoTopY = Ground.GROUND_Y - standDino.getHeight() + 5;
 
         topPoint = dinoTopY - 140;
 
