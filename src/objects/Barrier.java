@@ -63,9 +63,10 @@ public class Barrier {
 
     public void update() {
         Iterator<BarrierImage> barrierImageIterator = barrierImagesList.iterator();
-        BarrierImage firstBI = new BarrierImage();
 
+        BarrierImage firstBI = barrierImageIterator.next();
         firstBI.x -= speed;
+        
         while (barrierImageIterator.hasNext()) {
             BarrierImage bi = barrierImageIterator.next();
             bi.x -= speed;
