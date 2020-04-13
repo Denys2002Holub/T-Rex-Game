@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class UserPanel {
 
@@ -8,7 +9,25 @@ public class UserPanel {
 
     JFrame gameWindow = new JFrame("T-Rex game by raptor");
 
-    public static void main(String[] args) {
+    public void createAndShowWindow() {
+        gameWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+        Container container = gameWindow.getContentPane();
+
+        GamePanel gamePanel = new GamePanel();
+        gamePanel.addKeyListener(gamePanel);
+        gamePanel.setFocusable(true);
+
+        container.setLayout(new BorderLayout());
+
+        container.add(gamePanel, BorderLayout.CENTER);
+
+        gameWindow.setSize(WIDTH, HEIGHT);
+        gameWindow.setResizable(false);
+        gameWindow.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        
     }
 }
