@@ -72,7 +72,13 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     }
 
     public void updateGame() {
-        score++;
+        if (score < 500) {
+            score++;
+        } else if (score < 1000) {
+            score += 2;
+        } else {
+            score += 3;
+        }
 
         ground.update();
         barrier.update();
