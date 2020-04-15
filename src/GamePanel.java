@@ -91,6 +91,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
             repaint();
             running = false;
             gameOver = true;
+            getDinoDieSound();
         }
     }
 
