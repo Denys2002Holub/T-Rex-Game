@@ -110,13 +110,14 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
                 dino.startRunning();
             } else {
                 dino.jumping();
+                getDinoJumpSound();
             }
         }
     }
 
     public void getDinoJumpSound() {
         try {
-            File dinoJumpSound = new File("..\\sounds\\dinoJump.mp3");
+            File dinoJumpSound = new File("C:\\Users\\38050\\IdeaProjects\\T-Rex-Game\\src\\sounds\\dinoJump.wav");
 
             AudioInputStream ais = AudioSystem.getAudioInputStream(dinoJumpSound);
 
