@@ -148,6 +148,23 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         }
     }
 
+    public void getScoreSound() {
+        try{
+            File scoreSound = new File("C:\\Users\\38050\\IdeaProjects\\T-Rex-Game\\src\\sounds\\scoreSound.wav");
+
+            AudioInputStream ais = AudioSystem.getAudioInputStream(scoreSound);
+
+            Clip clip = AudioSystem.getClip();
+
+            clip.open(ais);
+
+            clip.setFramePosition(0);
+            clip.start();
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void keyPressed(KeyEvent e) {
 
