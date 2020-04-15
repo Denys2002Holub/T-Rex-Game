@@ -3,15 +3,13 @@ import objects.Dino;
 import objects.Ground;
 import objects.Sun;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
+import java.io.IOException;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener {
 
@@ -128,6 +126,23 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
             clip.setFramePosition(0);
             clip.start();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getDinoDieSound() {
+        try {
+            File dinoDieSound = new File("C:\\Users\\38050\\IdeaProjects\\T-Rex-Game\\src\\sounds\\dinoDie.wav");
+
+            AudioInputStream ais = AudioSystem.getAudioInputStream(dinoDieSound);
+
+            Clip clip = AudioSystem.getClip();
+
+            clip.open(ais);
+
+            clip.setFramePosition(0);
+            clip.start();
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
         }
     }
