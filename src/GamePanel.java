@@ -83,6 +83,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
             score += 3;
         }
 
+        if (score%500 == 0) {
+            getScoreSound();
+        }
+
         ground.update();
         barrier.update();
 
