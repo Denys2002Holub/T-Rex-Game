@@ -46,7 +46,7 @@ public class Barrier {
         imagesList.add(new Resource().getResourceImage("../images/Cactus-2.png"));
         imagesList.add(new Resource().getResourceImage("../images/Cactus-5.png"));
         imagesList.add(new Resource().getResourceImage("../images/Cactus-2.png"));
-        imagesList.add(new Resource().getResourceImage("../images/Cactus-1.png"));
+        imagesList.add(new Resource().getResourceImage("../images/Cactus-5.png"));
 
         int x = firstX;
 
