@@ -120,7 +120,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     public void getDinoJumpSound() {
         try {
-            File dinoJumpSound = new File("C:\\Users\\38050\\IdeaProjects\\T-Rex-Game\\src\\sounds\\dinoJump.wav");
+            File dinoJumpSound = new File("..\\T-Rex-Game\\src\\sounds\\dinoJump.wav");
 
             AudioInputStream ais = AudioSystem.getAudioInputStream(dinoJumpSound);
 
@@ -137,7 +137,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     public void getDinoDieSound() {
         try {
-            File dinoDieSound = new File("C:\\Users\\38050\\IdeaProjects\\T-Rex-Game\\src\\sounds\\dinoDie.wav");
+            File dinoDieSound = new File("..\\T-Rex-Game\\src\\sounds\\dinoDie.wav");
 
             AudioInputStream ais = AudioSystem.getAudioInputStream(dinoDieSound);
 
@@ -154,7 +154,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     public void getScoreSound() {
         try{
-            File scoreSound = new File("C:\\Users\\38050\\IdeaProjects\\T-Rex-Game\\src\\sounds\\scoreSound.wav");
+            File scoreSound = new File("..\\T-Rex-Game\\src\\sounds\\scoreSound.wav");
 
             AudioInputStream ais = AudioSystem.getAudioInputStream(scoreSound);
 
