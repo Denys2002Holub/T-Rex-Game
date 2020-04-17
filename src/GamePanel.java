@@ -92,11 +92,13 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
             score += 4;
         }
 
-        if (score > 3000) {
-            setBackground(Color.black);
-        } else if (score > 14000) {
+        if (score < 3000) {
             setBackground(Color.lightGray);
-        } else if (score > 25000) {
+        } else if (score < 14000) {
+            setBackground(Color.black);
+        } else if (score < 25000) {
+            setBackground(Color.lightGray);
+        } else if (score < 40000) {
             setBackground(Color.black);
         } else {
             setBackground(Color.lightGray);
