@@ -78,10 +78,16 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     public void updateGame() {
         if (score < 500) {
+            barrier.speed = 10;
+            ground.speed = 10;
             score++;
         } else if (score < 1000) {
+            barrier.speed = 11;
+            ground.speed = 11;
             score += 2;
         } else {
+            barrier.speed = 13;
+            ground.speed = 13;
             score += 4;
         }
 
