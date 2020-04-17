@@ -40,13 +40,15 @@ public class Ground {
 
             groundImagesList.add(groundImageObject);
         }
+
+        speed = 10;
     }
 
     public void update() {
         Iterator<GroundImage> iterator = groundImagesList.iterator();
         GroundImage first = iterator.next();
 
-        first.x -= 10;
+        first.x -= speed;
         int previousX = first.x;
 
         while (iterator.hasNext()) {
