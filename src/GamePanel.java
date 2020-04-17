@@ -83,7 +83,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
             score += 3;
         }
 
-        if (score%500 == 0) {
+        if (score % 500 == 0) {
             getScoreSound();
         }
 
@@ -153,7 +153,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     }
 
     public void getScoreSound() {
-        try{
+        try {
             File scoreSound = new File("..\\T-Rex-Game\\src\\sounds\\scoreSound.wav");
 
             AudioInputStream ais = AudioSystem.getAudioInputStream(scoreSound);
