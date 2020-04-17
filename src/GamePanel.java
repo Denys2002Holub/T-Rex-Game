@@ -119,6 +119,10 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         }
     }
 
+    public int getMaxScore() {
+        
+    }
+
     public void getDinoJumpSound() {
         try {
             File dinoJumpSound = new File("..\\T-Rex-Game\\src\\sounds\\dinoJump.wav");
