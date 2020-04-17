@@ -14,6 +14,8 @@ public class Ground {
         int x;
     }
 
+    public int speed;
+
     public static int GROUND_Y;
 
     public BufferedImage image;
