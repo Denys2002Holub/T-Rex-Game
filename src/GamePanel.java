@@ -78,31 +78,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     }
 
     public void updateGame() {
-        if (score < 500) {
-            barrier.speed = 10;
-            ground.speed = 10;
-            score++;
-        } else if (score < 1000) {
-            barrier.speed = 11;
-            ground.speed = 11;
-            score += 2;
-        } else {
-            barrier.speed = 13;
-            ground.speed = 13;
-            score += 4;
-        }
+        getGameSpeed();
 
-        if (score < 3000) {
-            setBackground(Color.lightGray);
-        } else if (score < 14000) {
-            setBackground(Color.black);
-        } else if (score < 25000) {
-            setBackground(Color.lightGray);
-        } else if (score < 40000) {
-            setBackground(Color.black);
-        } else {
-            setBackground(Color.lightGray);
-        }
+        getBackgroundColor();
 
         if (score % 500 == 0) {
             getScoreSound();
@@ -136,6 +114,36 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
                 dino.jumping();
                 getDinoJumpSound();
             }
+        }
+    }
+
+    public void getGameSpeed() {
+        if (score < 500) {
+            barrier.speed = 10;
+            ground.speed = 10;
+            score++;
+        } else if (score < 1000) {
+            barrier.speed = 11;
+            ground.speed = 11;
+            score += 2;
+        } else {
+            barrier.speed = 13;
+            ground.speed = 13;
+            score += 4;
+        }
+    }
+
+    public void getBackgroundColor() {
+        if (score < 3000) {
+            setBackground(Color.lightGray);
+        } else if (score < 14000) {
+            setBackground(Color.black);
+        } else if (score < 25000) {
+            setBackground(Color.lightGray);
+        } else if (score < 40000) {
+            setBackground(Color.black);
+        } else {
+            setBackground(Color.lightGray);
         }
     }
 
