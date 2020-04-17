@@ -52,7 +52,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         super.paint(g);
 
         g.setFont(new Font("Courier New", Font.BOLD, 25));
-        g.drawString(Integer.toString(score), getWidth() / 2 - 5, 100);
+        g.drawString(Integer.toString(score), (getWidth() / 2 - 5) + 175, 50);
         g.drawString("max: " + Integer.toString(getMaxScore()), getWidth() / 2 - 5, 50);
 
         ground.create(g);

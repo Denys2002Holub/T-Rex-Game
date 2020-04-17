@@ -94,7 +94,7 @@ public class Dino {
 
             case DIE:
                 g.drawImage(deadDino, dinoStartX, dinoTop, null);
-                g.drawString("G A M E  O V E R", 280, 150);
+                g.drawString("G A M E  O V E R", 280, 250);
                 break;
         }
     }
