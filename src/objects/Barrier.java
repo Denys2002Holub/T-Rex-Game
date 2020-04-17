@@ -53,7 +53,7 @@ public class Barrier {
         for (BufferedImage bi : imagesList) {
             BarrierImage barrierImg = new BarrierImage();
             barrierImg.barrierImage = bi;
-            barrierImg.x = firstX;
+            barrierImg.x = x;
             barrierImg.y = Ground.GROUND_Y - bi.getHeight() + 5;
             x += getBarrierInterval();
 
