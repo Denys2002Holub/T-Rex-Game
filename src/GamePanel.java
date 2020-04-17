@@ -120,7 +120,12 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     }
 
     public int getMaxScore() {
-        
+        if (gameOver) {
+            if (score > maxScore) {
+                maxScore = score;
+            }
+        }
+        return maxScore;
     }
 
     public void getDinoJumpSound() {
