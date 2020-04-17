@@ -44,6 +44,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
         setSize(WIDTH, HEIGHT);
         setVisible(true);
+
         setBackground(Color.lightGray);
     }
 
@@ -89,6 +90,16 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
             barrier.speed = 13;
             ground.speed = 13;
             score += 4;
+        }
+
+        if (score > 3000) {
+            setBackground(Color.black);
+        } else if (score > 14000) {
+            setBackground(Color.lightGray);
+        } else if (score > 25000) {
+            setBackground(Color.black);
+        } else {
+            setBackground(Color.lightGray);
         }
 
         if (score % 500 == 0) {
