@@ -29,6 +29,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     private Thread animator;
 
     private int score;
+    private int maxScore;
 
     public GamePanel() {
         WIDTH = UserPanel.WIDTH;
