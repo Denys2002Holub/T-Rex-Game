@@ -53,6 +53,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
         g.setFont(new Font("Courier New", Font.BOLD, 25));
         g.drawString(Integer.toString(score), getWidth() / 2 - 5, 100);
+        g.drawString("max: " + Integer.toString(getMaxScore()), getWidth() / 2 - 5, 50);
 
         ground.create(g);
         dino.create(g);
