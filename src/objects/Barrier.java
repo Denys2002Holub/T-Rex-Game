@@ -24,7 +24,7 @@ public class Barrier {
         }
     }
 
-    private int speed, firstX;
+    public int speed, firstX;
 
     ArrayList<BarrierImage> barrierImagesList;
     ArrayList<BufferedImage> imagesList;
