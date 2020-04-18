@@ -5,10 +5,11 @@ import resources.Resource;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Sun {
 
-    public class SunImage{
+    public class SunImage {
         private BufferedImage image;
         int x;
     }
@@ -37,10 +38,23 @@ public class Sun {
     }
 
     public void update() {
-        
+        Iterator<SunImage> iterator = sunImagesList.iterator();
+        SunImage sunImage = iterator.next();
+
+        sunImage.x -= speed;
+
+        int previousX = sunImage.x;
+
+        if (sunImage.x < -image.getWidth()) {
+            sunImagesList.remove(sunImage);
+            sunImage.x = 800;
+            sunImagesList.add(sunImage);
+        }
     }
 
     public void create(Graphics g) {
-        g.drawImage(image, sunX, sunY, null);
+        for (SunImage sunImage : sunImagesList) {
+            g.drawImage(sunImage.image, sunImage.x, sunY, null);
+        }
     }
 }
