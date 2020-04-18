@@ -4,12 +4,20 @@ import resources.Resource;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class Sun {
 
-    private static int sunX, sunY;
+    public class SunImage{
+        private BufferedImage image;
+        int x;
+    }
+
+    private static int speed, sunY;
 
     private BufferedImage image;
+
+    public ArrayList<SunImage> sunImagesList;
 
     public Sun(int panelHeight, int panelWidth) {
 
