@@ -101,21 +101,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        if (e.getKeyCode() == KeyEvent.VK_UP || e.getKeyChar() == ' ') {
-            if (gameOver) {
-                score = 0;
-                barrier.resume();
-                gameOver = false;
-            }
-            if (animator == null || !running) {
-                animator = new Thread(this);
-                animator.start();
-                dino.startRunning();
-            } else {
-                dino.jumping();
-                getDinoJumpSound();
-            }
-        }
     }
 
     public void getGameSpeed() {
@@ -215,11 +200,24 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
+        if (e.getKeyCode() == KeyEvent.VK_UP || e.getKeyChar() == ' ') {
+            if (gameOver) {
+                score = 0;
+                barrier.resume();
+                gameOver = false;
+            }
+            if (animator == null || !running) {
+                animator = new Thread(this);
+                animator.start();
+                dino.startRunning();
+            } else {
+                dino.jumping();
+                getDinoJumpSound();
+            }
+        }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
     }
 }
