@@ -14,7 +14,7 @@ public class Sun {
         int x;
     }
 
-    private static int speed, sunY;
+    public static int speed, sunY;
 
     private BufferedImage image;
 
