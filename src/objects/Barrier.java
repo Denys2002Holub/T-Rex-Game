@@ -37,7 +37,6 @@ public class Barrier {
 
     public Barrier(int panelWidth) {
         firstX = (int) (panelWidth * 1.5);
-        speed = 10;
 
         barrierImagesList = new ArrayList<BarrierImage>();
         imagesList = new ArrayList<BufferedImage>();

@@ -40,8 +40,6 @@ public class Ground {
 
             groundImagesList.add(groundImageObject);
         }
-
-        speed = 10;
     }
 
     public void update() {
