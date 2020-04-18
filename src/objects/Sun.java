@@ -20,11 +20,20 @@ public class Sun {
     public ArrayList<SunImage> sunImagesList;
 
     public Sun(int panelHeight, int panelWidth) {
-
-        image = new Resource().getResourceImage("../images/Sun.png");
-
         sunY = (int) (panelHeight - (0.6 * panelHeight));
-        sunX = (int) (panelWidth - (0.15 * panelWidth));
+
+        try {
+            image = new Resource().getResourceImage("../images/Sun.png");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        sunImagesList = new ArrayList<SunImage>();
+
+        SunImage sunImage = new SunImage();
+        sunImage.image = image;
+        sunImage.x = panelWidth;
+        sunImagesList.add(sunImage);
     }
 
     public void create(Graphics g) {
