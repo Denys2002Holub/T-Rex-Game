@@ -36,6 +36,10 @@ public class Sun {
         sunImagesList.add(sunImage);
     }
 
+    public void update() {
+        
+    }
+
     public void create(Graphics g) {
         g.drawImage(image, sunX, sunY, null);
     }
