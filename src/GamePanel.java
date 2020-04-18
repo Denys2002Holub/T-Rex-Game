@@ -88,6 +88,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
         ground.update();
         barrier.update();
+        sun.update();
 
         if (barrier.isIntersect()) {
             dino.die();
@@ -121,14 +122,17 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         if (score < 500) {
             barrier.speed = 10;
             ground.speed = 10;
+            sun.speed = 1;
             score++;
         } else if (score < 1000) {
             barrier.speed = 12;
             ground.speed = 12;
+            sun.speed = 2;
             score += 2;
         } else {
             barrier.speed = 14;
             ground.speed = 14;
+            sun.speed = 3;
             score += 4;
         }
     }
