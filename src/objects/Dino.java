@@ -56,7 +56,6 @@ public class Dino {
         switch (state) {
             case STAND:
                 g.drawImage(standDino, dinoStartX, dinoTopY, null);
-                g.drawString("P R E S S  'S P A C E'  T O  S T A R T", 120, 250);
                 break;
 
             case JUMPING:
