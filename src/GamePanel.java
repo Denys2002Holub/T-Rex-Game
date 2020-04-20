@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener {
@@ -157,6 +158,16 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         if (gameOver) {
             if (score > maxScore) {
                 maxScore = score;
+
+                String maxScoreToString = Integer.toString(maxScore);
+
+                try (FileOutputStream fileOutputStream = new FileOutputStream("..\\T-Rex-game\\src\\maxScore\\MaxScore.txt")) {
+                    for (int i = 0; i < maxScoreToString.length(); i++) {
+                        fileOutputStream.write(maxScoreToString.charAt(i));
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
         return maxScore;
