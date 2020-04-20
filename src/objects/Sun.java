@@ -37,7 +37,7 @@ public class Sun {
         sunImagesList.add(sunImage);
     }
 
-    public void update() {
+    public void update(int panelWidth) {
         Iterator<SunImage> iterator = sunImagesList.iterator();
         SunImage sunImage = iterator.next();
 
@@ -47,7 +47,7 @@ public class Sun {
 
         if (sunImage.x < -image.getWidth()) {
             sunImagesList.remove(sunImage);
-            sunImage.x = 800;
+            sunImage.x = panelWidth;
             sunImagesList.add(sunImage);
         }
     }

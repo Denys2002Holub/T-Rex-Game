@@ -88,7 +88,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
         ground.update();
         barrier.update();
-        sun.update();
+        sun.update(WIDTH);
 
         if (barrier.isIntersect()) {
             dino.die();
